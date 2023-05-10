@@ -1,0 +1,92 @@
+.amt-container{
+    padding: 20px;
+    background-color: beige;
+    box-shadow: -1px 1px 3px 0px gray;
+    .amt-wraper{
+        text-align: center;
+        .total-amt-div{
+            margin-bottom: 20px;
+        }
+        .total-amt{
+            font-size: 30px;
+            font-weight: 400;
+            text-shadow: 1px 2px 1px gray;
+        }
+        .income-amt,.expense-amt{
+            font-size: 20px;
+            font-weight: 300;
+            text-shadow: -1px 0px 1px gray
+        }
+        .in-exp{
+            display: flex;
+            text-align: center;
+            justify-content: space-around;
+        }
+    }
+}
+.positive{
+    color: #189918;
+}
+.list-item-positive{
+    background-color: #9ef1a838;
+}
+.negative{
+    color: #f94141;
+}
+.list-item-negative{
+    background-color: #fbafa81f;
+}
+.tran-date-div,.tran-amt-div {
+    display:inline-flex;
+ }
+  .tran-date,.tran-amt,.tran-details{
+     margin-top: 3px;
+  }
+  .transaction-list{
+    max-height: 350px;
+    overflow-y: auto;
+    border: 1px solid lightgray;
+    box-shadow: 1px 1px 6px 1px lightgray
+  }
+.item-col{
+    font-size: 14px;
+}
+mat-list-item{
+    background: #f1f1f1;
+    margin-bottom: 2px;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.item-col button{
+    min-width: 20px;
+    padding: 0 0;
+    margin-top: -6px;
+}
+h4{
+    text-align: center;
+    font-weight: 500;
+}
+/* Set the width and color of the scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  /* Set the background color of the track */
+  ::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+  }
+  
+  /* Set the color and shape of the thumb */
+  ::-webkit-scrollbar-thumb {
+    background-color: #b4b1b1;
+    border-radius: 10px;
+  }
+  
+  /* Set the color of the thumb on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #5a5858;
+  }
+  
+  

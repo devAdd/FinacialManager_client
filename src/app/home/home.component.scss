@@ -1,0 +1,32 @@
+mat-sidenav{
+    background-color: #0f172a;
+    width: 230px;
+    height: 100%;
+}
+mat-sidenav-content{
+    height: 100vh;
+    .main{
+        .page-title{
+            background: #f1f1f1;
+            padding: 8px;
+            text-align: center;
+            font-size: 16px;
+        }
+        .page-content{
+            margin:0 15px;
+        }
+    }
+}
+mat-toolbar{
+    mat-icon{
+        margin-left: 15px;
+        color: gray;
+    }
+    justify-content: space-between;
+    .box{
+        margin-top: 15px;
+        mat-icon{
+            cursor:pointer;
+        }
+    }
+}

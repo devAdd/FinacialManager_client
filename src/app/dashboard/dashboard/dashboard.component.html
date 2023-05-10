@@ -1,0 +1,65 @@
+<div class="amt-container">
+    <div class="amt-wraper">
+        <div class="total-amt-div">
+            <mat-icon>currency_rupee</mat-icon>
+            <span class="total-amt">10,00,000</span> 
+        </div>
+        <div class="in-exp">
+            <div class="income positive">
+                <span>
+                    <mat-icon>arrow_downward</mat-icon>
+                </span>
+                <mat-icon>currency_rupee</mat-icon>
+                <span class="income-amt">20,00,000</span> 
+            </div>
+            <div class="expense negative">
+                <span>
+                    <mat-icon>arrow_upward</mat-icon>
+                </span>
+                <mat-icon>currency_rupee</mat-icon>
+               <span class="expense-amt">10,00,000</span> 
+                
+            </div>
+        </div>
+    </div>
+</div>
+<div class="in-exp-container">
+    <h4>Income-Expense Details</h4>
+    <button mat-button color="primary" (click)="getTransactionDetails()">Click</button>
+    <div class="transaction-list">
+        <mat-list role="list">
+                <mat-list-item role="listitem" *ngFor="let tran of transactions" [ngClass]="{
+                    'list-item-positive': tran.incomeExpense === 'I',
+                    'list-item-negative': tran.incomeExpense=== 'E' }">
+                    <div  matLine style="display: flex;">
+                        <div class="item-col" style="flex-basis: 10%;">
+                            <button mat-button color="accent">
+                                <mat-icon>edit_document</mat-icon>
+                            </button> 
+                            <button mat-button color="warn">
+                                <mat-icon>delete</mat-icon>
+                            </button>       
+                         </div>
+                        <div class="item-col" style="flex-basis: 20%;">
+                            <div class="tran-date-div">
+                                <mat-icon matListItemIcon>date_range</mat-icon>
+                                <span class="tran-date">{{tran.date}}</span>
+                            </div>  
+                        </div>
+                        <div class="item-col" style="flex-basis: 50%;">
+                            <span class="tran-details"></span> {{tran.description}}
+                        </div>
+                        <div class="item-col" style="flex-basis: 20%;text-align: right;">
+                            <div class="tran-amt-div">
+                            <mat-icon>currency_rupee</mat-icon>
+                            <span class="tran-amt">{{tran.amount}}</span>
+                            <mat-icon [ngClass]="{
+                                'positive': tran.incomeExpense === 'I',
+                                'negative': tran.incomeExpense=== 'E' }">{{tran.incomeExpense === 'E'?'arrow_upward':'arrow_downward'}}</mat-icon>
+                        </div>
+                        </div>
+                      </div>
+                </mat-list-item>
+            </mat-list>          
+    </div>
+</div>

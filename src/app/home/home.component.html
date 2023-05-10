@@ -1,0 +1,26 @@
+<mat-sidenav-container class="conatiner">
+    <mat-sidenav #sidebar mode="side" opened>
+        <app-sidebar></app-sidebar>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="content">
+            <div class="toolbar">
+                <mat-toolbar>
+                    <mat-icon (click)="sidebar.toggle()" >menu</mat-icon>
+                    <div class="box">
+                        <mat-icon>search</mat-icon>                        
+                        <mat-icon>mail_outline</mat-icon>
+                        <mat-icon (click)="logout()">logout</mat-icon>
+                    </div>
+                </mat-toolbar>
+            </div>
+            <div class="main">
+                <div class="page-title">Page Title</div>
+                <div class="page-content">
+                    <router-outlet></router-outlet>
+                </div>
+                
+            </div>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
