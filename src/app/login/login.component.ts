@@ -2,9 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AuthenticationService } from '../service/authentication.service';
 import { Router } from '@angular/router';
-import { error } from 'cypress/types/jquery';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { catchError, of, tap } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +11,10 @@ import { catchError, of, tap } from 'rxjs';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private auth : AuthenticationService,private router:Router,private http:HttpClient) { }
+  constructor(
+    private auth : AuthenticationService,
+    private router:Router,
+    private http:HttpClient) { }
 
   ngOnInit(): void {
   }
@@ -24,7 +25,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/home/dashboard']);
       }
     });
-
+  
 // this.http.get<any>("http://localhost:8080/test")
 //     .pipe(
 //       tap(res => {
@@ -36,6 +37,7 @@ export class LoginComponent implements OnInit {
 //         return of(null);
 //       })
 //     ).subscribe();
+
        
   }
 

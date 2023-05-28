@@ -1,0 +1,23 @@
+
+mat-form-field{
+    width: 98%;
+    margin: 1%;
+}
+mat-slide-toggle{
+    width: 98%;
+    margin-top: 2%;
+}
+.inline-datepicker {
+    display: flex;
+    align-items: center;
+  }
+  
+  .inline-datepicker .mat-datepicker-toggle {
+    margin-left: 8px; /* Adjust the margin as needed */
+  }
+  form{
+    font-size: 14px;
+  }
+  .dialog-action{
+    justify-content: flex-end;
+  }
